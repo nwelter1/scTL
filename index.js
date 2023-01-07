@@ -5,7 +5,7 @@ function delay(time){
     });
 }
 const getTracks = async (title) => {
-    const browser = await puppeteer.launch({headless:false});
+    const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto("https://www.1001tracklists.com/")
     await page.screenshot({path: 'test.png'})
