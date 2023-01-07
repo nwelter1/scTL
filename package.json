@@ -1,0 +1,24 @@
+{
+  "name": "nodesc",
+  "version": "1.0.0",
+  "description": "Site to generate tracklists for a given soundcloud mix",
+  "main": "index.js",
+  "scripts": {
+    "test": "jtest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nwelter1/scTL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nwelter1/scTL/issues"
+  },
+  "homepage": "https://github.com/nwelter1/scTL#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^19.4.1"
+  }
+}
