@@ -12,7 +12,7 @@ const getTracks = async (title) => {
     await page.setViewport({width: 1920, height: 1001 })
     await page.waitForSelector('input#sBoxInput')
     await page.click("input#sBoxInput")
-    console.log(`tring to type title: ${title}`)
+    console.log(`trying to type title: ${title}`)
     await page.keyboard.type(title)
     await page.waitForSelector('.acObjLi')
     await page.click('.acObjLi')
@@ -33,8 +33,9 @@ app.use(express.json())
 
 
 app.get('/', async (request, response) => {
-    let tracks = await getTracks("PARTY FAVOR HARD 2018")
-    console.log(tracks)
+    let title = request.body.title;
+    console.log(`Title: ${title}`)
+    let tracks = await getTracks(title);
     response.send(JSON.stringify(tracks))
 
     
